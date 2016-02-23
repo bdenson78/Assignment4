@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html ng-app="ITDeptApp">
+<head>
+    <title></title>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script type="text/javascript">
+        var app = angular.module('ITDeptApp', []);
+        app.controller('Brandon', function ($scope) {
+            $scope.firstName = "Brandon"
+            $scope.title = "Developer"
+        });
+        app.controller('Chris', function ($scope) {
+            $scope.secondName = "Chris"
+            $scope.title = "Director of IT"
+        });
+        app.controller('Kasia', function ($scope) {
+            $scope.thirdName = "Kasia"
+            $scope.title = "Developer"
+        });
+    </script>
+    <style>
+        body {
+            background-color: rgba(0, 0, 0, 0.76);
+            text-align: center;
+        }
+        #b {
+            background-color: #1000FF;
+	    border: 2px solid;
+	    border-radius: 5px;	
+            color: white;
+        }
+        #c {
+            background-color: #53BF52;
+	    border: 2px solid;
+	    border-radius: 5px;	
+            color: white;
+
+        }
+        #k {
+            background-color: pink;
+	    border: 2px solid;
+	    border-radius: 5px;	
+            color: white;
+        }
+    </style>
+
+
+
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div ng-controller="Brandon">
+        <p id="b"><span style = "font-size: 50px">{{firstName}}</span><br />{{title}}</p>
+        
+    </div>
+    <div ng-controller="Chris">
+        <p id="c"><span style="font-size: 50px">{{secondName}}</span><br />{{title}}</p>
+    </div>
+    <div ng-controller="Kasia">
+        <p id="k"><span style="font-size: 50px">{{thirdName}}</span><br />{{title}}</p>
+    </div>
+</body>
+</html>
